@@ -1,1 +1,1 @@
-# Django
+Django相关的一些测试开发项目
