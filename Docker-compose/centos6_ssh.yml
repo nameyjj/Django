@@ -1,17 +1,17 @@
 version: '2'
 services:  
-  sshd.ql.corp:
-    container_name: sshd.ql.corp
+  sshd.pub.corp:
+    container_name: sshd.pub.corp
     network_mode: "bridge"
     image: centos6:ssh
     ports:
       - "2122:22"
       - "8188:8080"
-    mem_limit: 1024m
+    mem_limit: 2048m
     privileged: true
     memswap_limit: -1
     volumes:
-      - /data:/data
+      - /data1/centos6-ssh:/data
       - /etc/timezone/timezone:/etc/timezone
-    hostname: ssh-host
+    hostname: docker-centos6
     restart: always
