@@ -3,7 +3,7 @@ services:
   sshd.pub.corp:
     container_name: sshd.pub.corp
     network_mode: "bridge"
-    image: centos6:centos6-ssh
+    image: centos:centos6-ssh
     ports:
       - "2122:22"
       - "8188:8080"
