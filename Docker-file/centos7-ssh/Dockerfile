@@ -1,4 +1,4 @@
-FROM centos:centos7
+FROM docker.io/centos:latest
 MAINTAINER Yang <nameyjj@gmail.com>
 RUN rm -f /etc/yum.repos.d/*
 ADD base-epel.repo /etc/yum.repos.d/base-epel.repo
