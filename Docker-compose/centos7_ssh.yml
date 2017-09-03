@@ -1,9 +1,9 @@
 version: '2'
 services:  
-  django-host:
-    container_name: centos7.localhost
+  centos7-ssh:
+    container_name: centos7-sshd
     network_mode: "bridge"
-    image: centos6:ssh
+    image: centos:centos7-ssh
     ports:
       - "2122:22"
       - "8188:8080"
@@ -11,7 +11,7 @@ services:
     privileged: true
     memswap_limit: -1
     volumes:
-      - /data:/data
+      - /data1/centos7-ssh:/data
       - /etc/timezone/timezone:/etc/timezone
-    hostname: django-host
+    hostname: centos7-host
     restart: always
